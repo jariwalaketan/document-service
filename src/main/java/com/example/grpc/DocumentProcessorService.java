@@ -42,7 +42,7 @@ public class DocumentProcessorService implements com.example.grpc.DocumentServic
                         .build());
             }
 //            // Check if user has required role
-            if (!securityIdentityAssociation.getIdentity().hasRole("user")) {
+            if (!securityIdentityAssociation.getIdentity().hasRole("viewer")) {
                 LOG.errorf("Access denied: User role required. Available roles: %s",
                     securityIdentityAssociation.getIdentity().getRoles());
                 return Uni.createFrom().item(DocumentResponse.newBuilder()
