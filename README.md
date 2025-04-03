@@ -24,7 +24,7 @@ Quarkus based microservice for managing documents with REST and gRPC APIs.
 docker run -p 8080:8080 -e KEYCLOAK_ADMIN=admin -e KEYCLOAK_ADMIN_PASSWORD=admin quay.io/keycloak/keycloak:latest start-dev
 ```
 
-- Setup test-relam, users (admin,viewer) along with roles (admin, user) and JWT claim attribute (tenant_id). 
+- Setup test-relam, users (admin-user,viewer-user) along with roles (admin, viewer) and JWT claim attribute (tenant_id). 
 
 2. Start the application:
 ```bash
