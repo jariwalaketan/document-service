@@ -1,0 +1,33 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.example.grpc";
+option java_outer_classname = "DocumentProto";
+
+package document;
+
+// Document service for processing and managing documents
+service DocumentService {
+  // Get document details
+  rpc GetDocument (DocumentRequest) returns (DocumentResponse) {}
+}
+
+// Request message for document operations
+message DocumentRequest {
+  // The unique identifier of the document
+  string document_id = 1;
+  // The tenant identifier
+  string tenant_id = 2;
+}
+
+// Response message for document operations
+message DocumentResponse {
+  // The status of the operation
+  // Possible values:
+  // - "Success": Operation completed successfully
+  // - "Error": Operation failed
+  string status = 1;
+  
+  // A descriptive message about the operation result
+  string message = 2;
+} 
